@@ -1,0 +1,44 @@
+.card-container {
+  perspective: 1000px;
+}
+
+/* .card {
+  width: 390px;
+  height: 230px;
+  border-radius: 20px;
+  background-image: url('../../../Images/abstract-background-with-patterned-glass-texture.jpg');
+  background-size: cover;
+  color: antiquewhite;
+  margin: 10px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  
+} */
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 10px;
+  
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  
+}

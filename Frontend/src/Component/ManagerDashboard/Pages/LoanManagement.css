@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set margin for the container */
+  .container {
+    margin: 20px;
+  }
+
+h1 {
+    margin-bottom: 10px;
+}
+
+/* Style the table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    text-align: left;
+    border: 1px solid white;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Style table rows */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Add margin and padding to the input field */
+input[type="text"] {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}

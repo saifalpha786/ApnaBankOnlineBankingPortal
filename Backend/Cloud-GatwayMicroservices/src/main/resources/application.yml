@@ -1,0 +1,60 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+     default-filters:
+      - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+     globalcors:
+       corsConfigurations:
+          '[/**]':
+              allowedOrigins: "*"
+              allowedMethods: "*"
+              allowedHeaders: "*"
+     routes:
+        - id: Authentication-Micorservices
+          uri: lb://Authentication-Micorservices
+          predicates:
+            - Path=/user/**, /account/**, /content/**, /reward/**
+        - id: Transaction-Management-Mircroservices
+          uri: lb://Transaction-Management-Mircroservices
+          predicates:
+            - Path=/transaction/**
+          filters:
+            - AuthenticationFilter
+        - id: Loan-Management-Mircroservices
+          uri: lb://Loan-Management-Mircroservices
+          predicates:
+            - Path=/loan/**
+          filters:
+            - AuthenticationFilter  
+        - id: CreditCard-Management-Mircroservices
+          uri: lb://CreditCard-Management-Mircroservices
+          predicates:
+            - Path=/creditcard/**
+          filters:
+            - AuthenticationFilter 
+        - id: Locker-Management-Mircroservices
+          uri: lb://Locker-Management-Mircroservices
+          predicates:
+            - Path=/locker/**
+          filters:
+            - AuthenticationFilter
+        - id: GiftCard-Management-Mircroservices
+          uri: lb://GiftCard-Management-Mircroservices
+          predicates:
+            - Path=/giftcard/**
+          filters:
+            - AuthenticationFilter   
+             
+             
+            
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      
+       
+              
+            
+            
