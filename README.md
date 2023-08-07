@@ -1,2 +1,6 @@
 # ApnaBankOnlineBankingPortal
 Apna Bank Online Banking Portal for the user to interact with all the features of internet banking.
+
+Key Features: JWT Authentication: Implemented secure JSON Web Token (JWT) authentication to ensure safe and seamless user login and authorization. MySQL Database Integration: Utilized MySQL to store and manage user account information, transaction data, and other banking details.Frontend Development: Developed the user interface using React, creating an intuitive and user-friendly banking experience.Backend Development: Built the backend using Spring Boot, creating robust APIs to handle user requests and transactions securely.Account Management: Implemented features such as account balance inquiries, fund transfers, and transaction history tracking.Security Measures: Ensured data security and user privacy by applying encryption and other best practices throughout the system.Error Handling and Validation: Implemented thorough error handling and input validation to enhance the system's reliability and user experience.Responsive Design: Ensured the application's responsiveness across different devices and screen sizes for a seamless user experience.
+
+Technologies Used: React, Spring Boot, Java, JWT Authentication, MySQL, RESTful APIs, HTML, CSS, JavaScript.
